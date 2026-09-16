@@ -8,3 +8,4 @@ int main(){
     }
     printf("%.0f\n",nc);   
 }
+/*每次调用getchar，则向后读取一个输入*/
