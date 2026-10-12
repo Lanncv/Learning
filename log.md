@@ -20,4 +20,10 @@ gdb and c，魔法师之夜.
 - 9.27 Have wrong with 3.3
 - 9.28 useragentskills,Pygmalion effect.Someting wrong in my Linux in.
 Finishing the wrong 3.3.
-- 
+github students pack ,JetBrains Students Pack
+- 10.1 Learn AI,some Web. And Computer foundation.
+- 10.2
+- 10.4 Programing anti
+- 10.9 Pointer.
+- 10.12 PTA's questions.
+  

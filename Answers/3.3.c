@@ -5,8 +5,8 @@ void expand(unsigned char s1[] , unsigned char s2[] ){
         switch(s1[i]){
             case '-': 
             if(i!=0){
-                i--;first=s1[i];
-                i+=2;last=s1[i];
+                first=s1[i-1];
+                last=s1[i+2];
                     if(last=='\0'){
                         s2[j]='\0';
                         break;
@@ -38,3 +38,18 @@ int main(){
     return 0;
     
 }
+void standard_expand(char s1[], char s2[] ){
+    char c;
+    int i,j;
+
+    i=j=0;
+    while((c=s1[i++])!='\0')
+        if(s1[i]=='-'&&s1[i+1]>=c){
+            i++;
+            while(c<s1[i])
+                s2[j++]=c;
+        }
+        else s2[j++]=c;
+    s2[j] = '\0';
+}
+/*What graceful,containing the solution of exception in achievement of common function*/
