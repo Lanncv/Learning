@@ -84,9 +84,15 @@ int getop(char s[]){
     i=0;
     if(c=='-'){
         while(isdigit(s[++i]=c=getch()))
+            ;
+            if(c=='.')
+                while (isdigit(s[++i]=c=getch()))
+                    ;
             s[i]='\0';                  /*上式++i的施行总会使s[i]中多填入一个非数字，那么，用'\0'覆盖*/
-            if(i>1)
+            if(i>1){
+                ungetch(c);
                 return NUMBER;
+            }
             else {
                 ungetch(c);
                 return '-';
@@ -97,12 +103,12 @@ int getop(char s[]){
             ;
         if(c=='.'){
             while (isdigit(s[++i]=c=getch()))
-                s[i]='\0';
+                ;
         }
         if (c!=EOF)
             ungetch(c);
     }
-        return NUMBER;
+        return NUMBER;                  /*与上面return的次序不同*/
 }
 int getch(void){
     return (bufp>0) ? buf[--bufp] : getchar();
